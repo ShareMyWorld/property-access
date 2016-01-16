@@ -1,5 +1,5 @@
 {
-    "name": "symfony/property-access",
+    "name": "symfony/smw-property-access",
     "type": "library",
     "description": "Symfony PropertyAccess Component",
     "keywords": ["property", "index", "access", "object", "array", "extraction", "injection", "reflection", "property path"],
