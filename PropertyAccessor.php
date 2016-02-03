@@ -299,7 +299,7 @@ class PropertyAccessor implements PropertyAccessorInterface
                 }
             }
 
-            if ($isIndex) {
+            if ($isIndex || is_array($objectOrArray)) {
                 $propertyValue = &$this->readIndex($objectOrArray, $property);
             } else {
                 $propertyValue = &$this->readProperty($objectOrArray, $property);
