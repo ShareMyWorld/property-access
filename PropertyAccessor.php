@@ -153,7 +153,7 @@ class PropertyAccessor implements PropertyAccessorInterface
             // you only need set value for '[a][b][c]' and it's safe to ignore '[a][b]' and '[a]'
             //
             if ($i === $propertyMaxIndex || !$propertyValues[$i + 1][self::IS_REF]) {
-                if ($propertyPath->isIndex($i)) {
+                if ($propertyPath->isIndex($i) || is_array($objectOrArray)) {
                     $this->writeIndex($objectOrArray, $property, $value);
                 } else {
                     $this->writeProperty($objectOrArray, $property, $value);
